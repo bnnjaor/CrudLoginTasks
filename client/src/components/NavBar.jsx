@@ -13,7 +13,7 @@ const NavBar = () => {
           </Link>
         </li>
         {isAuthenticated ? (
-          <li className="text-2xl">Welcome {user.username}</li>
+          <li className="text-2xl">Bienvenido {user.username}</li>
         ) : (
           ""
         )}
@@ -25,7 +25,7 @@ const NavBar = () => {
                 className="bg-purple-600 px-4 py-1 rounded-md my-2 hover:bg-purple-800 transition ease-in-out"
                 onClick={() => logout()}
               >
-                Logout
+                Cerrar Sesion
               </Link>
             </li>
           </div>
@@ -36,7 +36,7 @@ const NavBar = () => {
                 to="/login"
                 className="bg-purple-600 px-4 py-1 rounded-md my-2 hover:bg-purple-800 transition ease-in-out"
               >
-                Login
+                Iniciar Sesion
               </Link>
             </li>
             <li>
@@ -44,7 +44,7 @@ const NavBar = () => {
                 to="/register"
                 className="bg-purple-600 px-4 py-1 rounded-md my-2 hover:bg-purple-800 transition ease-in-out"
               >
-                Register
+                Registrarse
               </Link>
             </li>
           </div>

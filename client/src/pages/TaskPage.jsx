@@ -19,7 +19,7 @@ const TasksPage = () => {
           className="mt-12 px-4 py-1 rounded-md my-2 bg-green-500 hover:bg-green-800 transition ease-in-out"
           onClick={() => navigate("/tasks/add-task")}
         >
-          New Task
+          Nueva Tarea
         </button>
       </div>
     );
@@ -35,7 +35,7 @@ const TasksPage = () => {
         className="mt-20 bg-green-500 p-2 rounded-md text-xl font-semibold"
         onClick={() => navigate("/tasks/add-task")}
       >
-        New Task
+        Nueva Tarea
       </button>
     </div>
   );

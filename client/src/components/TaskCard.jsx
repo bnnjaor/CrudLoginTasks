@@ -18,13 +18,13 @@ const TaskCard = ({ task }) => {
           }}
           className="text-xs bg-red-500 p-1 rounded-sm"
         >
-          Delete
+          Borrar
         </button>
         <Link
           to={`/tasks/${task._id}`}
           className="text-xs bg-blue-500 p-1 rounded-sm"
         >
-          Update
+          Actualizar
         </Link>
       </div>
       <p>{dayjs(task.date).utc().format("DD/MM/YYYY")}</p>

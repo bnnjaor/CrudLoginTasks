@@ -29,7 +29,7 @@ export const getTask = async (req, res) => {
  try {
   const task = await Task.findById(req.params.id).populate("user");
   if (!task)
-    return res.status(404).send("The task with that ID does not exist.");
+    return res.status(404).send("La tarea con ese ID no existe.");
   res.json(task);
  } catch (error) {
   return res.status(404).json({ ok: false, message: error });
@@ -39,7 +39,7 @@ export const deleteTask = async (req, res) => {
   try {
     const task = await Task.findByIdAndDelete(req.params.id);
   if (!task)
-    return res.status(404).json({ ok: false, message: "Task not found" });
+    return res.status(404).json({ ok: false, message: "Tarea no encontrada" });
   return res.sendStatus(204);
   } catch (error) {
     return res.status(404).json({ ok: false, message:error})
@@ -51,7 +51,7 @@ export const updateTask = async (req, res) => {
       new: true,
     });
     if (!task)
-      return res.status(404).json({ ok: false, message: "Task not found" });
+      return res.status(404).json({ ok: false, message: "Tarea no encontrada" });
     res.json(task);
   } catch (error) {
     return res.status(404).json({ok: false, message: error})

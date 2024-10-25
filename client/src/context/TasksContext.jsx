@@ -30,8 +30,10 @@ export const TaskProvider = ({ children }) => {
   };
 
   const createTask = async (task) => {
-    const res = await createTaskRequest(task);
-    await getTasks();
+    try {
+      const res = await createTaskRequest(task);
+      await getTasks();
+    } catch (error) {}
   };
 
   const deleteTask = async (id) => {

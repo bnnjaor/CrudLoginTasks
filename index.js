@@ -2,5 +2,5 @@ import app from "./app.js";
 import connectDb from "./src/db/connect.js";
 
 connectDb();
-app.listen(3000);
-console.log("server listening on port 3000");
+app.listen(process.env.PORT);
+console.log(`App listening on port ${process.env.PORT}`);
